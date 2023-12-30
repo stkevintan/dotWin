@@ -6,7 +6,7 @@ function is_admin {
     ([security.principal.windowsprincipal]($id)).isinrole($admin)
 }
 
-if (is_admin) {
+if (!(is_admin)) {
 	Write-Host "Please run this script in elevated shell" -ForegroundColor Red
 	return
 }
